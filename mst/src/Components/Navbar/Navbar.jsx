@@ -1,42 +1,44 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import logo from "/logo.webp";
+import React from "react";
+import Logo from "../../assets/logo.webp";
 
 const Navbar = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => setMenuOpen(!isMenuOpen);
-
   return (
-    <nav className="bg-gray-800 p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center text-white text-xl">
-          <img src={logo} alt="Logo" className="h-8 w-8 mr-2" />
-          MST
-        </Link>
-
-        <button className="lg:hidden text-white" onClick={toggleMenu}>
-          &#9776;
-        </button>
-        <div className={`lg:flex space-x-4 ${isMenuOpen ? "block" : "hidden"}`}>
-          <Link to="/" className="text-white hover:text-yellow-400">
-            Home
-          </Link>
-          <Link to="/events" className="text-white hover:text-yellow-400">
-            Events
-          </Link>
-          <Link to="/gallery" className="text-white hover:text-yellow-400">
-            Gallery
-          </Link>
-          <Link to="/highlights" className="text-white hover:text-yellow-400">
-            Highlights
-          </Link>
-          <Link to="/teams" className="text-white hover:text-yellow-400">
-            Teams
-          </Link>
+    <>
+      <nav
+        data-aos="fade-down"
+        className="fixed top-0 right-0 w-full z-50 bg-black/10 backdrop-blur-sm py-4 sm:py-0"
+      >
+        <div className="container">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-4 text-white font-bold text-2xl">
+              <img src={Logo} alt="" className="w-10" />
+              <span>MST</span>
+            </div>
+            <div className="text-white hidden sm:block">
+              <ul className="flex items-center gap-6 text-xl py-4 ">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Highlights</a>
+                </li>
+                <li>
+                  <a href="#">Gallery</a>
+                </li>
+                <li>
+                  <a href="#">Teams</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <button className=" text-white border-2 border-white px-3 py-1 rounded-md">
+                Login
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 
