@@ -13,7 +13,7 @@ const Game2 = () => {
                 data-aos-delay="300"
                 className="text-sky-800 uppercase"
               >
-                our mission
+                our sport
               </p>
               <h1
                 data-aos="fade-up"
