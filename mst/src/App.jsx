@@ -21,7 +21,18 @@ function App() {
   return (
     <>
       <div>
-        <img src={bg2} alt="" className="w-full brightness-50" />
+        <div className="homepage">
+          <h2>
+            <span>M</span>
+            <span>S</span>
+            <span>T</span>
+            <span>&nbsp;</span>
+            <span>2</span>
+            <span>0</span>
+            <span>2</span>
+            <span>5</span>
+          </h2>
+        </div>
         <div className=" h-[700px] relative">
           <Navbar />
           <About />
@@ -29,7 +40,6 @@ function App() {
         <Gallery />
         <Games />
         <Game2 />
-
         <Footer5 />
       </div>
     </>
